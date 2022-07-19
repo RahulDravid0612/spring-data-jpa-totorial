@@ -53,7 +53,7 @@ class StudentRepositoryTest {
 
     @Test
     public void printStudentByFirstName(){
-        List<Student> students=studentRepository.findByFirstName("deepalai");
+        List<Student> students=studentRepository.findByFirstName("deepali");
         System.out.println("students = " + students);
     }
     @Test
