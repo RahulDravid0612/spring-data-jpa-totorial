@@ -5,9 +5,9 @@ import com.itorizon.spring.data.jpatotorial.Entity.CourseMaterial;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.stereotype.Repository;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.util.List;
+
 
 @SpringBootTest
 class CourseMaterialRepositoryTest {
@@ -30,5 +30,9 @@ class CourseMaterialRepositoryTest {
 
         repository.save(courseMaterial);
     }
-
+    @Test
+    public void findAllCourseMaterial(){
+        List<CourseMaterial> courseMaterials=repository.findAll();
+        System.out.println("courseMaterials = " + courseMaterials);
+    }
 }
