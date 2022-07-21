@@ -18,7 +18,7 @@ public interface StudentRepository extends JpaRepository<Student,Long> {
     public List<Student> findByFirstNameContaining(String Name);
     public List<Student> findByGuardianName(String Name);
     public List<Student> findBySecondName(String Name);
-
+    public Student findByStudentId(Long studentId);
 
    //JPQL
     @Query("select s from Student s where s.emailId=?1")
